@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ShoppingCart, Brush, Rocket } from "lucide-react";
 
@@ -39,9 +39,16 @@ export default function ServicesSection() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.6, 0.05, -0.01, 0.9]
+      }
+    },
   };
 
   return (
