@@ -134,9 +134,9 @@ export default function HeroSection() {
 
         {/* Main Logo Text with staggered animation */}
         <motion.h1
-          className="font-playfair text-5xl md:text-7xl tracking-widest mb-8"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          className="font-playfair text-5xl md:text-7xl tracking-widest mb-8 drop-shadow-lg"
+          initial={{ opacity: 0, y: 50 }} // Initial state for the whole H1
+          animate={{ opacity: 1, y: 0 }} // Target state for the whole H1
           transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
         >
           {"BuildUrWèb".split("").map((letter, index) => (
@@ -146,7 +146,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
               className="inline-block cursor-pointer"
-              whileHover={{ scale: 1.2, y: -10, color: "#a7f3d0" }}
+              whileHover={{ scale: 1.2, y: -10, color: "#a7f3d0" }} // Tailwind green-300
             >
               {letter}
             </motion.span>

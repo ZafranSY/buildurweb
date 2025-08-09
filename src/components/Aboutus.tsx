@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import zafranImage from '../images/zafran.png';
-
+import tiveneshImage from '../images/tivenesh.png';
 export default function AboutSection() {
   const [titleRef, titleInView] = useInView({ threshold: 0.3, triggerOnce: true });
   const [philosophyRef, philosophyInView] = useInView({ threshold: 0.2, triggerOnce: true });
@@ -11,7 +11,6 @@ export default function AboutSection() {
   const [zafranRef, zafranInView] = useInView({ threshold: 0.2, triggerOnce: true });
 
   // TODO: Replace these placeholder image URLs with actual photos of the founders.
-  const tiveneshImage = "https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=2071&auto=format&fit=crop";
 
 
   const containerVariants = {
@@ -83,7 +82,7 @@ export default function AboutSection() {
           >
             <div className="relative h-96 lg:h-[500px] overflow-hidden rounded-lg group">
               <motion.img
-                src={tiveneshImage}
+                src={tiveneshImage.src}
                 alt="Tivenesh, Co-founder of BuildUrWeb"
                 className="w-full h-full object-cover"
                 initial={{ scale: 1.1 }}
