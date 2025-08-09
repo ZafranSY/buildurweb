@@ -84,8 +84,8 @@ export default function AboutSection() {
               <motion.img
                 src={tiveneshImage.src}
                 alt="Tivenesh, Co-founder of BuildUrWeb"
-                className="w-full h-full object-cover"
-                initial={{ scale: 1.1 }}
+                className="w-full h-full object-cover object-top"
+                initial={{ scale: 1 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
               />
